@@ -3,9 +3,13 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 import { BiCodeBlock } from "react-icons/bi";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-// import ReactTyped from "react-typed";
+import { TypeAnimation } from "react-type-animation";
+import React from "react";
 
 const Home = () => {
+  //
+  //
+  //
   return (
     <body className="px-2">
       <section className="max-w-[95%] mx-auto">
@@ -21,16 +25,22 @@ const Home = () => {
                 optimization.
               </span>
               <span>
-                {/* <ReactTyped
-                  strings={[
+                {" "}
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
                     "Performance and Scalability are priorities on my radar.",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
                     "Learning new syntax everyday!",
+                    1000,
                     "Driving others to acquire the same love for code",
+                    1000,
                   ]}
-                  typeSpeed={66}
-                  backSpeed={35}
-                  loop
-                /> */}
+                  wrapper="span"
+                  speed={60}
+                  className="text-2xl"
+                  repeat={Infinity}
+                />
               </span>
             </h2>
           </div>
