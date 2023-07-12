@@ -3,7 +3,7 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 import { BiCodeBlock } from "react-icons/bi";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import ReactTyped from "react-typed";
+// import ReactTyped from "react-typed";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
                 optimization.
               </span>
               <span>
-                <ReactTyped
+                {/* <ReactTyped
                   strings={[
                     "Performance and Scalability are priorities on my radar.",
                     "Learning new syntax everyday!",
@@ -30,7 +30,7 @@ const Home = () => {
                   typeSpeed={66}
                   backSpeed={35}
                   loop
-                />
+                /> */}
               </span>
             </h2>
           </div>
