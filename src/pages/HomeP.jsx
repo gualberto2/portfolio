@@ -19,8 +19,8 @@ const Home = () => {
               <span>Hi. I'm Elijah. </span>
               <span>A Developer.</span>
             </h1>
-            <h2 className="text-center flex flex-col tracking-widest">
-              <span>
+            <h2 className="text-center flex flex-col tracking-widest text-lg">
+              <span clas>
                 Developing for efficiency, engagement, accessibility and
                 optimization.
               </span>
@@ -38,7 +38,6 @@ const Home = () => {
                   ]}
                   wrapper="span"
                   speed={60}
-                  className="text-2xl"
                   repeat={Infinity}
                 />
               </span>
