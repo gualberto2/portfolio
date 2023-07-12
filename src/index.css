@@ -23,3 +23,17 @@ code {
 .card:hover .icon-animation {
   transform: translateX(6px);
 }
+
+.bounceEffect {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
