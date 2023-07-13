@@ -81,3 +81,12 @@ code {
     grid-column: 3 / span 2;
   }
 }
+
+.unclalmp {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.unclamp:onclick {
+  overflow: visible;
+}

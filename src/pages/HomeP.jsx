@@ -1,16 +1,29 @@
-import { FaAngellist } from "react-icons/fa";
+import { FaAngellist, FaRust } from "react-icons/fa";
 import { BsBoxArrowInRight } from "react-icons/bs";
-import { BiCodeBlock } from "react-icons/bi";
+import {
+  BiCodeBlock,
+  BiLogoReact,
+  BiLogoTailwindCss,
+  BiLogoJavascript,
+  BiLogoMongodb,
+} from "react-icons/bi";
 import { FaRegPaperPlane } from "react-icons/fa";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
-import { RxDoubleArrowDown, RxDoubleArrowRight } from "react-icons/rx";
-import React from "react";
+import { DiRubyRough } from "react-icons/di";
+import { SiStrapi } from "react-icons/si";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { RxDoubleArrowDown } from "react-icons/rx";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(true);
+  };
   return (
-    <body className="px-2">
-      <section className="max-w-[95%] mx-auto 2xl:max-w-6xl">
+    <body className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
+      <section className="">
         <section className="">
           <div className="py-20">
             <h1 className=" flex flex-col text-center text-5xl md:text-6xl font-semibold tracking-tighter mb-8">
@@ -84,51 +97,89 @@ const Home = () => {
             </div>
           </div>
         </section>
+
         <div className="flex justify-center my-4">
           <MdOutlineKeyboardArrowDown className="text-3xl text-center bounceEffect" />
         </div>
-        <section className="mt-16">
-          <div>
-            <div className="grid grid-cols-2 grid-rows-3 md:grid-cols-5 md:grid-rows-3 ">
-              <div className="bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8] transition duration-150 ease-in-out transform p-12 md:p-0 md:text-center md:py-12 rounded-3xl m-2 col-start-1 col-end-3 row-start-1 row-end-2 md:col-start-1 md:col-end-3  md:row-start-1 md:row-end-2 cursor-pointer card z-20">
-                <h2 className="text-xl text-inherit font-normal uppercase">
-                  Card
-                </h2>
-                <h1 className="text-4xl text-inherit font-medium uppercase">
-                  Uno
-                </h1>
-                <RxDoubleArrowDown className="absolute inline-block md:hidden bottom-8 right-10 bounceEffect text-2xl icon-animation transition duration-200 ease-in-out" />
-                <RxDoubleArrowRight className="absolute hidden md:inline-block slideEffect bottom-8 right-10 text-2xl icon-animation transition duration-200 ease-in-out" />
-              </div>
-              <div className="bg-white transition duration-150 ease-in-out transform p-12 md:p-0 md:text-center md:py-12 rounded-3xl m-2 col-start-1 col-end-3 row-start-1 row-end-2 md:col-start-2 md:col-end-7  md:row-start-1 md:row-end-2 cursor-pointer z-10">
-                <h2 className="text-xl text-inherit font-normal uppercase">
-                  Card
-                </h2>
-                <h1 className="text-4xl text-inherit font-medium uppercase">
-                  Uno
-                </h1>
-              </div>
-              <div className="bg-gradient-to-r from-[#A7C7C4] to-[#9FC6C2] hover:from-[#B4CFCD] hover:to-[#B4CFCD] p-12 rounded-3xl m-2 transition duration-150 ease-in-out transform cursor-pointer  card col-start-1 col-end-3 row-start-2 row-end-3 md:col-start-2 md:col-end-4 md:row-start-2 md:row-end-3">
-                <h2 className="text-xl font-normal uppercase">Card</h2>
-                <h1 className="text-4xl font-medium uppercase">dos</h1>
-                <div className="arrow-container">
-                  <RxDoubleArrowDown className="absolute inline-block md:hidden bottom-8 right-10 text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
-                  <RxDoubleArrowRight className="absolute hidden md:inline-block slideEffect right-10 text-2xl icon-animation transition duration-200 ease-in-out" />
-                </div>
-                <img src="" alt="" />
-              </div>
-              <div className="bg-gradient-to-r from-[#B676BC] to-[#B87FBD] hover:from-[#B478BA]  hover:to-[#B478BA] p-12 rounded-3xl m-2 transition duration-150 ease-in-out transform cursor-pointer  card col-start-1 col-end-3 row-start-3 row-end-4 md:col-start-3 md:col-end-4 md:row-start-3 md:row-end-4">
-                <h2 className="text-xl font-normal uppercase">View my</h2>
-                <h1 className="text-4xl font-medium uppercase">tres</h1>
-                <div className="arrow-container">
-                  <RxDoubleArrowDown className="absolute inline-block md:hidden bottom-8 right-10 text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
-                  <RxDoubleArrowRight className="absolute hidden md:inline-block slideEffect bottom-8 right-10 text-2xl icon-animation transition duration-200 ease-in-out" />
-                </div>
-                <img src="" alt="" />
-              </div>
-            </div>
+        {/* <div className="hidden md:inline-block">
+          <HomeCardsLarge />
+        </div>
+        <div className="inline-block w-full md:hidden">
+          <HomeCardsMobile />
+        </div> */}
+      </section>
+      <section className="my-12 grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-4 md:gap-6">
+        {/* <div className="text-center bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8] p-12 rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
+          <h3 className="text-2xl mb-2 font-semibold">Front-End</h3>
+          <div className="flex flex-row text-5xl justify-center mb-3">
+            <BiLogoReact />
+            <BiLogoJavascript />
+            <BiLogoTailwindCss />
           </div>
-        </section>
+          <div className="border-t border-black px-8 pt-1">
+            <p
+              className={`tracking-widest text-lg ${
+                showMore ? "line-clamp-none" : "line-clamp-3"
+              }`}
+            >
+              Experienced in high demand Front-End languages including HTML,
+              CSS, JS, React and Next. Highly adaptable and flexible with
+              learning and utilizing newer and older languages
+            </p>
+            {!showMore && (
+              <button
+                className="text-black hover:underline mt-2"
+                onClick={handleShowMore}
+              >
+                Show More
+              </button>
+            )}
+          </div>
+        </div> */}
+        {/* ... */}
+      </section>
+      <section className="my-12 grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-4 md:gap-6">
+        <div className=" text-center bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8] p-12 rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
+          <h3 className="text-2xl mb-2 font-semibold">Front-End</h3>
+          <div className="flex flex-row text-5xl justify-center mb-3">
+            <BiLogoReact />
+            <BiLogoJavascript />
+            <BiLogoTailwindCss />
+          </div>
+          <div className="border-t  border-black px-8 pt-1">
+            <p className="tracking-widest text-lg ">
+              Experienced in high demand Front-End languages including HTML,
+              CSS, JS, React and Next. Highly adaptable and flexible with
+              learning and utilizing newer and older languages
+            </p>
+          </div>
+        </div>
+        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] hover:from-[#9789CD]  hover:to-[#9789CD] transition ease-in-out duration-200 hover:shadow-md">
+          <h3 className="text-2xl mb-2 font-semibold">Back-End</h3>
+          <div className="flex flex-row text-5xl justify-center mb-3">
+            <SiStrapi />
+            <BiLogoMongodb />
+          </div>
+          <div className="border-t border-black px-8 pt-1">
+            <p className="tracking-widest text-lg ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              officia. Accusantium, harum!
+            </p>
+          </div>
+        </div>
+        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md">
+          <h3 className="text-2xl mb-2 font-semibold">OOP</h3>
+          <div className="flex flex-row text-5xl justify-center mb-3">
+            <DiRubyRough />
+            <FaRust />
+          </div>
+          <div className="border-t  border-black px-8 pt-1">
+            <p className="tracking-widest">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+              officia. Accusantium, harum!
+            </p>
+          </div>
+        </div>
       </section>
     </body>
   );
