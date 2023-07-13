@@ -28,6 +28,10 @@ code {
   animation: bounce 2s infinite;
 }
 
+.slideEffect {
+  animation: slide 2s infinite;
+}
+
 @keyframes bounce {
   0%,
   100% {
@@ -35,5 +39,45 @@ code {
   }
   50% {
     transform: translateY(-7px);
+  }
+}
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-7px);
+  }
+}
+
+.cardExperimental {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardExperimental.expanded {
+  transform: translateX(-50%);
+  grid-column: 1 / span 2;
+}
+
+.cardExperimental.expanded {
+  transform: translateX(-50%);
+  grid-column: 1 / span 2;
+}
+
+.placeholder-text {
+  height: 0.8em;
+  width: 80%;
+  margin-top: 1.2em;
+  background-color: #e2e8f0;
+  opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+  .cardExperimental.expanded {
+    transform: translateX(50%);
+    grid-column: 3 / span 2;
   }
 }
