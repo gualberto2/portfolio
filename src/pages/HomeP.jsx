@@ -1,4 +1,4 @@
-import { FaAngellist, FaRust } from "react-icons/fa";
+import { FaAngellist, FaRust, FaPeopleCarry } from "react-icons/fa";
 import { BsBoxArrowInRight } from "react-icons/bs";
 import {
   BiCodeBlock,
@@ -18,6 +18,24 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import React, { useState } from "react";
 
 const Home = () => {
+  const [formData, setFormData] = useState({
+    first: "",
+    last: "",
+    phone: "",
+    txtAr: "",
+  });
+
+  const { first, last, phone, txtAr } = formData;
+
+  function onChange(e) {
+    if (!e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.id]: e.target.value,
+      }));
+    }
+  }
+
   // const [showFrontEnd, setShowFrontEnd] = useState(false);
   // const [showBackEnd, setShowBackEnd] = useState(false);
   // const [showOOP, setShowOOP] = useState(false);
@@ -152,19 +170,21 @@ const Home = () => {
         {/* ... */}
       </section>
       <section className="min-h-[420px] grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1  gap-4 md:gap-6">
-        <div className=" text-center bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8] p-12 rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
-          <h3 className="text-2xl mb-2 font-semibold">Front-End</h3>
-          <div className="flex flex-row text-5xl justify-center mb-3">
-            <BiLogoReact />
-            <BiLogoJavascript />
-            <BiLogoTailwindCss />
+        <div className="bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8]  rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
+          <div className="px-12 pt-12 pb-2">
+            <div className="flex flex-row text-2xl font-medium uppercase mb-2">
+              <BiLogoReact />
+              <BiLogoJavascript />
+              <BiLogoTailwindCss />
+            </div>
+            <h3 className="text-4xl font-medium uppercase">Front-End</h3>
           </div>
-          <div className="border-t  border-black px-8 pt-1">
+          <div className=" px-8 pt-1">
             <p
               // className={`tracking-widest text-lg ${
               //   showFrontEnd ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg"
+              className="tracking-widest text-lg pb-2"
             >
               Experienced in high demand Front-End languages including HTML,
               CSS, JS, React and Next. Highly adaptable and flexible with
@@ -179,22 +199,24 @@ const Home = () => {
             </button> */}
           </div>
         </div>
-        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] hover:from-[#9789CD]  hover:to-[#9789CD] transition ease-in-out duration-200 hover:shadow-md">
-          <h3 className="text-2xl mb-2 font-semibold">Back-End</h3>
-          <div className="flex flex-row text-5xl justify-center mb-3">
-            <BiLogoFirebase />
-            <BiLogoMongodb />
-            <SiRubyonrails />
+        <div className="  rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] hover:from-[#9789CD]  hover:to-[#9789CD] transition ease-in-out duration-200 hover:shadow-md">
+          <div className="px-12 pt-12 pb-2">
+            <div className="flex flex-row text-2xl font-medium uppercase mb-2">
+              <BiLogoFirebase />
+              <BiLogoMongodb />
+              <SiRubyonrails />
+            </div>
+            <h3 className="text-4xl font-medium uppercase">Back-End</h3>
           </div>
-          <div className="border-t border-black px-8 pt-1">
+          <div className="px-8 pt-1">
             <p
               // className={`tracking-widest text-lg ${
               //   showBackEnd ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg"
+              className="tracking-widest text-lg pb-2"
             >
               Whether simplicity or complexity, my expertise allows for robust
-              and data management, intergration amd efficient development all
+              and data management, intergration and efficient development all
               while delivering outstanding solutions with precision
             </p>
             {/* <button onClick={() => handleShowBackEnd()}>
@@ -206,20 +228,22 @@ const Home = () => {
             </button> */}
           </div>
         </div>
-        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md ">
-          <h3 className="text-2xl mb-2 font-semibold">OOP</h3>
-          <div className="flex flex-row text-5xl justify-center mb-3">
-            <DiRubyRough />
-            <FaRust />
+        <div className="rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md ">
+          <div className="px-12 pt-12 pb-2">
+            <div className="flex flex-row text-2xl mb-2">
+              <DiRubyRough />
+              <FaRust />
+            </div>{" "}
+            <h3 className="text-4xl font-medium uppercase">OOP</h3>
           </div>
-          <div className="border-t  border-black px-8 pt-1">
+          <div className="px-8 pt-1">
             <p
               // className={`tracking-widest text-lg ${
               //   showOOP ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg"
+              className="tracking-widest text-lg pb-2"
             >
-              As a newcomer, using object-oriented programming (OOP) languages
+              Being new, using object-oriented programming (OOP) languages
               offers clear syntax, powerful abstractions, and vast communities
               for support, facilitating my learning journey and enabling
               efficient problem-solving.
@@ -233,6 +257,59 @@ const Home = () => {
             </button> */}
           </div>
         </div>
+      </section>
+      <section className="mx-[20%] my-12 bg-gradient-to-r from-[#C26697] to-[#C2709C] transition duration-150 ease-in-out p-8 rounded-2xl">
+        <div className="mb-8">
+          <h2 className="text-xl font-normal uppercase">Lets work</h2>
+          <h3 className="text-4xl text-inherit font-medium uppercase ">
+            Together
+          </h3>{" "}
+        </div>
+
+        <form>
+          <div className="grid md:grid-cols-2 md:grid-rows-3 grid-rows-7 grid-cols-1 justify-center items-center gap-x-2 gap-y-6">
+            <input
+              type="text"
+              id="first"
+              onChange={onChange}
+              value={first}
+              placeholder="first"
+              className="md:col-start-1 md:col-end-2 md:row-start-0 md:row-end-1 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+            />
+            <input
+              type="text"
+              id="last"
+              onChange={onChange}
+              value={last}
+              placeholder="last"
+              className="md:col-start-2 md:col-end-3 md:row-start-0 md:row-end-1 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+            />
+
+            <input
+              type="tel"
+              placeholder="phone"
+              onChange={onChange}
+              value={phone}
+              id="phone"
+              className="md:row-start-1 md:row-end-2 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+            />
+            <input
+              type="textarea"
+              placeholder="Short Message (100 Words Max)"
+              id="txtAr"
+              onChange={onChange}
+              value={txtAr}
+              min={10}
+              max={100}
+              className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+            />
+            <button className="md:row-start-3 md:row-end-4 md:col-span-2 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black">
+              <p className="text-center">
+                <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out " />
+              </p>
+            </button>
+          </div>
+        </form>
       </section>
     </body>
   );
