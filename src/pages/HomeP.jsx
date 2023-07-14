@@ -6,36 +6,49 @@ import {
   BiLogoTailwindCss,
   BiLogoJavascript,
   BiLogoMongodb,
+  BiLogoFirebase,
 } from "react-icons/bi";
+
 import { FaRegPaperPlane } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { DiRubyRough } from "react-icons/di";
-import { SiStrapi } from "react-icons/si";
+import { SiRubyonrails } from "react-icons/si";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { RxDoubleArrowDown } from "react-icons/rx";
+// import { RxDoubleArrowDown, RxDoubleArrowUp } from "react-icons/rx";
 import React, { useState } from "react";
 
 const Home = () => {
-  const [showMore, setShowMore] = useState(false);
+  // const [showFrontEnd, setShowFrontEnd] = useState(false);
+  // const [showBackEnd, setShowBackEnd] = useState(false);
+  // const [showOOP, setShowOOP] = useState(false);
 
-  const handleShowMore = () => {
-    setShowMore(true);
-  };
+  // const handleShowFrontEnd = () => {
+  //   setShowFrontEnd(!showFrontEnd);
+  // };
+
+  // const handleShowBackEnd = () => {
+  //   setShowBackEnd(!showBackEnd);
+  // };
+
+  // const handleShowOOP = () => {
+  //   setShowOOP(!showOOP);
+  // };
+
   return (
     <body className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
       <section className="">
         <section className="">
-          <div className="py-20">
+          <div className="pt-20 ">
             <h1 className=" flex flex-col text-center text-5xl md:text-6xl font-semibold tracking-tighter mb-8">
               <span>Hi. I'm Elijah. </span>
               <span>A Developer.</span>
             </h1>
             <h2 className="text-center flex flex-col tracking-widest text-lg">
-              <span clas>
+              <span>
                 Developing for efficiency, engagement, accessibility and
                 optimization.
               </span>
-              <span>
+              <span className="h-[100px]">
                 {" "}
                 <TypeAnimation
                   sequence={[
@@ -138,7 +151,7 @@ const Home = () => {
         </div> */}
         {/* ... */}
       </section>
-      <section className="my-12 grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-4 md:gap-6">
+      <section className="min-h-[420px] grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1  gap-4 md:gap-6">
         <div className=" text-center bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8] p-12 rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
           <h3 className="text-2xl mb-2 font-semibold">Front-End</h3>
           <div className="flex flex-row text-5xl justify-center mb-3">
@@ -147,37 +160,77 @@ const Home = () => {
             <BiLogoTailwindCss />
           </div>
           <div className="border-t  border-black px-8 pt-1">
-            <p className="tracking-widest text-lg ">
+            <p
+              // className={`tracking-widest text-lg ${
+              //   showFrontEnd ? "line-clamp-none" : "line-clamp-3"
+              // }`}
+              className="tracking-widest text-lg"
+            >
               Experienced in high demand Front-End languages including HTML,
               CSS, JS, React and Next. Highly adaptable and flexible with
               learning and utilizing newer and older languages
             </p>
+            {/* <button onClick={() => handleShowFrontEnd()}>
+              {(showFrontEnd && (
+                <RxDoubleArrowUp className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )) || (
+                <RxDoubleArrowDown className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )}
+            </button> */}
           </div>
         </div>
         <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] hover:from-[#9789CD]  hover:to-[#9789CD] transition ease-in-out duration-200 hover:shadow-md">
           <h3 className="text-2xl mb-2 font-semibold">Back-End</h3>
           <div className="flex flex-row text-5xl justify-center mb-3">
-            <SiStrapi />
+            <BiLogoFirebase />
             <BiLogoMongodb />
+            <SiRubyonrails />
           </div>
           <div className="border-t border-black px-8 pt-1">
-            <p className="tracking-widest text-lg ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-              officia. Accusantium, harum!
+            <p
+              // className={`tracking-widest text-lg ${
+              //   showBackEnd ? "line-clamp-none" : "line-clamp-3"
+              // }`}
+              className="tracking-widest text-lg"
+            >
+              Whether simplicity or complexity, my expertise allows for robust
+              and data management, intergration amd efficient development all
+              while delivering outstanding solutions with precision
             </p>
+            {/* <button onClick={() => handleShowBackEnd()}>
+              {(showBackEnd && (
+                <RxDoubleArrowUp className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )) || (
+                <RxDoubleArrowDown className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )}
+            </button> */}
           </div>
         </div>
-        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md">
+        <div className="text-center p-12 rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md ">
           <h3 className="text-2xl mb-2 font-semibold">OOP</h3>
           <div className="flex flex-row text-5xl justify-center mb-3">
             <DiRubyRough />
             <FaRust />
           </div>
           <div className="border-t  border-black px-8 pt-1">
-            <p className="tracking-widest">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-              officia. Accusantium, harum!
+            <p
+              // className={`tracking-widest text-lg ${
+              //   showOOP ? "line-clamp-none" : "line-clamp-3"
+              // }`}
+              className="tracking-widest text-lg"
+            >
+              As a newcomer, using object-oriented programming (OOP) languages
+              offers clear syntax, powerful abstractions, and vast communities
+              for support, facilitating my learning journey and enabling
+              efficient problem-solving.
             </p>
+            {/* <button onClick={() => handleShowOOP()}>
+              {(showOOP && (
+                <RxDoubleArrowUp className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )) || (
+                <RxDoubleArrowDown className="text-2xl bounceEffect icon-animation transition duration-200 ease-in-out" />
+              )}
+            </button> */}
           </div>
         </div>
       </section>

@@ -90,3 +90,6 @@ code {
 .unclamp:onclick {
   overflow: visible;
 }
+.slide-out {
+  transform: translateY(-50px);
+}
