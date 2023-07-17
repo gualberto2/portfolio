@@ -192,7 +192,7 @@ const Home = () => {
               // className={`tracking-widest text-lg ${
               //   showFrontEnd ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg pb-2"
+              className="tracking-widest text-lg pb-6"
             >
               Experienced in high demand Front-End languages including HTML,
               CSS, JS, React and Next. Highly adaptable and flexible with
@@ -221,7 +221,7 @@ const Home = () => {
               // className={`tracking-widest text-lg ${
               //   showBackEnd ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg pb-2"
+              className="tracking-widest text-lg pb-6"
             >
               Whether simplicity or complexity, my expertise allows for robust
               and data management, intergration and efficient development all
@@ -249,7 +249,7 @@ const Home = () => {
               // className={`tracking-widest text-lg ${
               //   showOOP ? "line-clamp-none" : "line-clamp-3"
               // }`}
-              className="tracking-widest text-lg pb-2"
+              className="tracking-widest text-lg pb-6"
             >
               Being new, using object-oriented programming (OOP) languages
               offers clear syntax, powerful abstractions, and vast communities
@@ -282,7 +282,7 @@ const Home = () => {
               onChange={onChange}
               value={first}
               placeholder="first"
-              className="md:col-start-1 md:col-end-2 md:row-start-0 md:row-end-1 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+              className="md:col-start-1 md:col-end-2 md:row-start-0 md:row-end-1 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
             <input
               type="text"
@@ -290,7 +290,7 @@ const Home = () => {
               onChange={onChange}
               value={last}
               placeholder="last"
-              className="md:col-start-2 md:col-end-3 md:row-start-0 md:row-end-1 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+              className="md:col-start-2 md:col-end-3 md:row-start-0 md:row-end-1 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
 
             <input
@@ -300,7 +300,7 @@ const Home = () => {
               value={phone}
               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               id="phone"
-              className="md:row-start-1 md:row-end-2 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+              className="md:row-start-1 md:row-end-2 md:col-span-2 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
             <input
               type="textarea"
@@ -310,9 +310,10 @@ const Home = () => {
               value={txtAr}
               min={15}
               max={500}
-              className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
+              rows="3"
+              className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white row-start-4 row-end-6 "
             />
-            <button className="md:row-start-3 md:row-end-4 md:col-span-2 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black text-center">
+            <button className="md:row-start-3 md:row-end-4 md:col-span-2 row-start-6 row-end-7 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black flex flex-row items-center justify-center">
               <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out" />
             </button>
           </div>

@@ -8,7 +8,7 @@ const PopUpMsg = ({ isOpen, closeModal }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={closeModal}
-      className="flex flex-col h-[400px] max-w-[250px] mx-auto items-center justify-center mt-20 border border-neutral-200 shadow-lg bg-zinc-200 px-4 gap-4"
+      className="flex flex-col h-[400px] max-w-[250px] mx-auto items-center justify-center mt-20 border border-neutral-200 shadow-lg bg-slate-300 px-4 gap-4"
     >
       <h2 className="text-center">
         Hi 👋! Please bare with me as this site is still under construction
