@@ -16,8 +16,14 @@ import { SiRubyonrails } from "react-icons/si";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 // import { RxDoubleArrowDown, RxDoubleArrowUp } from "react-icons/rx";
 import React, { useState } from "react";
+import PopUpMsg from "../components/PopUpMsg";
 
 const Home = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
+  const closeModal = () => {
+    setShowPopup(false);
+  };
   const [formData, setFormData] = useState({
     first: "",
     last: "",
@@ -54,6 +60,8 @@ const Home = () => {
 
   return (
     <body className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
+      {showPopup && <PopUpMsg isOpen={true} closeModal={closeModal} />}
+
       <section className="">
         <section className="">
           <div className="pt-20 ">
@@ -258,7 +266,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="mx-[20%] my-12 bg-gradient-to-r from-[#C26697] to-[#C2709C] transition duration-150 ease-in-out p-8 rounded-2xl">
+      <section className="lg:mx-[15%] my-12 bg-gradient-to-r from-[#C26697] to-[#C2709C] transition duration-150 ease-in-out p-8 rounded-2xl">
         <div className="mb-8">
           <h2 className="text-xl font-normal uppercase">Lets work</h2>
           <h3 className="text-4xl text-inherit font-medium uppercase ">
@@ -290,23 +298,22 @@ const Home = () => {
               placeholder="phone"
               onChange={onChange}
               value={phone}
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               id="phone"
               className="md:row-start-1 md:row-end-2 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
             <input
               type="textarea"
-              placeholder="Short Message (100 Words Max)"
+              placeholder="Short Message (Minimum 15 words)"
               id="txtAr"
               onChange={onChange}
               value={txtAr}
-              min={10}
-              max={100}
+              min={15}
+              max={500}
               className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
-            <button className="md:row-start-3 md:row-end-4 md:col-span-2 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black">
-              <p className="text-center">
-                <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out " />
-              </p>
+            <button className="md:row-start-3 md:row-end-4 md:col-span-2 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black text-center">
+              <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out" />
             </button>
           </div>
         </form>
