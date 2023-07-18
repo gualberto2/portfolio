@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row justify-center mt-auto">
+    <footer className="grid mt-auto py-20">
       <div>
         {/* on repeat spotify api thingy here */}
         <p className="cursor-pointer">
