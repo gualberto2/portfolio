@@ -8,7 +8,8 @@ import {
   BiLogoMongodb,
   BiLogoFirebase,
 } from "react-icons/bi";
-
+import { serverTimestamp, addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { DiRubyRough } from "react-icons/di";
@@ -17,9 +18,11 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 // import { RxDoubleArrowDown, RxDoubleArrowUp } from "react-icons/rx";
 import React, { useState } from "react";
 import PopUpMsg from "../components/PopUpMsg";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const closeModal = () => {
     setShowPopup(false);
@@ -42,6 +45,24 @@ const Home = () => {
     }
   }
 
+  async function onSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const formDataCopy = {
+        ...formData,
+        timestamp: serverTimestamp(),
+      };
+      delete formDataCopy.formDEV;
+      const docRef = await addDoc(collection(db, "getInTouch"), formData);
+      console.log(`Here is the information you submited: ${docRef}`);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  }
+
+  if (loading) return <Loading />;
   // const [showFrontEnd, setShowFrontEnd] = useState(false);
   // const [showBackEnd, setShowBackEnd] = useState(false);
   // const [showOOP, setShowOOP] = useState(false);
@@ -178,7 +199,7 @@ const Home = () => {
         {/* ... */}
       </section>
       <section className="min-h-[420px] grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1  gap-4 md:gap-6">
-        <div className="bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF] hover:from-[#7A95B8] hover:to-[#7A95B8]  rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
+        <div className="bg-gradient-to-r from-[#88A0BF] to-[#7D9ABF]   rounded-3xl transition ease-in-out duration-200 hover:shadow-md">
           <div className="px-12 pt-12 pb-2">
             <div className="flex flex-row text-2xl font-medium uppercase mb-2">
               <BiLogoReact />
@@ -207,7 +228,7 @@ const Home = () => {
             </button> */}
           </div>
         </div>
-        <div className="  rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] hover:from-[#9789CD]  hover:to-[#9789CD] transition ease-in-out duration-200 hover:shadow-md">
+        <div className="  rounded-3xl bg-gradient-to-r from-[#AAA1CE] to-[#A399CC] transition ease-in-out duration-200 hover:shadow-md">
           <div className="px-12 pt-12 pb-2">
             <div className="flex flex-row text-2xl font-medium uppercase mb-2">
               <BiLogoFirebase />
@@ -236,7 +257,7 @@ const Home = () => {
             </button> */}
           </div>
         </div>
-        <div className="rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C] hover:from-[#A9898C] hover:to-[#A9898C] transition ease-in-out duration-200 hover:shadow-md ">
+        <div className="rounded-3xl bg-gradient-to-r from-[#B09396] to-[#B8999C]  transition ease-in-out duration-200 hover:shadow-md ">
           <div className="px-12 pt-12 pb-2">
             <div className="flex flex-row text-2xl mb-2">
               <DiRubyRough />
@@ -274,7 +295,7 @@ const Home = () => {
           </h3>{" "}
         </div>
 
-        <form>
+        <form className="" onSubmit={onSubmit}>
           <div className="grid md:grid-cols-2 md:grid-rows-3 grid-rows-7 grid-cols-1 justify-center items-center gap-x-2 gap-y-6">
             <input
               type="text"
@@ -313,7 +334,10 @@ const Home = () => {
               rows="3"
               className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white row-start-4 row-end-6 "
             />
-            <button className="md:row-start-3 md:row-end-4 md:col-span-2 row-start-6 row-end-7 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black flex flex-row items-center justify-center">
+            <button
+              className="md:row-start-3 md:row-end-4 md:col-span-2 row-start-6 row-end-7 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black flex flex-row items-center justify-center"
+              type="submit"
+            >
               <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out" />
             </button>
           </div>
