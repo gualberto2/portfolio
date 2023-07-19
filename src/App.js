@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/HomeP";
@@ -8,6 +7,9 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useState } from "react";
 import Work from "./pages/Work";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +44,24 @@ function App() {
           <Route
             path="/work"
             element={<Work />}
+            onStart={showLoadingIndicator}
+            onEnd={hideLoadingIndicator}
+          />
+          <Route
+            path="/contact"
+            element={<Contact />}
+            onStart={showLoadingIndicator}
+            onEnd={hideLoadingIndicator}
+          />
+          <Route
+            path="/projects"
+            element={<Projects />}
+            onStart={showLoadingIndicator}
+            onEnd={hideLoadingIndicator}
+          />
+          <Route
+            path="/resume"
+            element={<Resume />}
             onStart={showLoadingIndicator}
             onEnd={hideLoadingIndicator}
           />

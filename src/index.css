@@ -93,3 +93,52 @@ code {
 .slide-out {
   transform: translateY(-50px);
 }
+
+.text-grow-on-hover {
+  transition: transform 0.2s ease-in-out;
+}
+
+.text-grow-on-hover:hover {
+  transform: scale(1.1);
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.language-container {
+  position: relative;
+}
+
+.language-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.language-container:hover .language-text {
+  opacity: 1;
+  bottom: -20px;
+}
+
+@media screen and (max-width: 768px) {
+  .language-container {
+    text-align: center;
+  }
+
+  .language-icon {
+    font-size: 3rem; /* Adjust the icon size for mobile */
+  }
+
+  .language-text {
+    display: block; /* Show the text always on mobile */
+    font-size: 1.5rem; /* Adjust the text size for mobile */
+  }
+}
