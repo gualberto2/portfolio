@@ -16,6 +16,12 @@ const Header = () => {
         </li>
         <li
           className="font-medium text-xl cursor-pointer"
+          onClick={() => navigate("/resume")}
+        >
+          Resume
+        </li>
+        <li
+          className="font-medium text-xl cursor-pointer"
           onClick={() => navigate("/about")}
         >
           About
