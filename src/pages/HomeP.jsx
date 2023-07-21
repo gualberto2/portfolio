@@ -191,11 +191,22 @@ const Home = () => {
           </div>
 
           <div className="language-container">
+            <SiPostgresql
+              className="language-icon text-grow-on-hover"
+              title="PostgreSQL"
+            />
+            <div className="language-text">PostgreSQL</div>
+          </div>
+          <div className="language-container">
             <BiLogoMongodb
               className="language-icon text-grow-on-hover"
               title="MongoDB"
             />
             <div className="language-text">MongoDB</div>
+          </div>
+          <div className="language-container">
+            <FaRust className="language-icon text-grow-on-hover" title="Rust" />
+            <div className="language-text">Rust</div>
           </div>
 
           <div className="language-container">
@@ -205,55 +216,6 @@ const Home = () => {
             />
             <div className="language-text">Ruby on Rails</div>
           </div>
-
-          <div className="language-container">
-            <SiStrapi
-              className="language-icon text-grow-on-hover"
-              title="Strapi"
-            />
-            <div className="language-text">Strapi</div>
-          </div>
-
-          <div className="language-container">
-            <BiLogoReact
-              className="language-icon text-grow-on-hover"
-              title="React"
-            />
-            <div className="language-text">React</div>
-          </div>
-
-          <div className="language-container">
-            <BiLogoGit
-              className="language-icon text-grow-on-hover"
-              title="Git"
-            />
-            <div className="language-text">Git</div>
-          </div>
-
-          <div className="language-container">
-            <BiLogoGraphql
-              className="language-icon text-grow-on-hover"
-              title="GraphQL"
-            />
-            <div className="language-text">GraphQL</div>
-          </div>
-
-          <div className="language-container">
-            <BiLogoJavascript
-              className="language-icon text-grow-on-hover"
-              title="JavaScript"
-            />
-            <div className="language-text">JavaScript</div>
-          </div>
-
-          <div className="language-container">
-            <BiLogoTailwindCss
-              className="language-icon text-grow-on-hover"
-              title="Tailwind CSS"
-            />
-            <div className="language-text">Tailwind CSS</div>
-          </div>
-
           <div className="language-container">
             <DiRubyRough
               className="language-icon text-grow-on-hover"
@@ -263,8 +225,33 @@ const Home = () => {
           </div>
 
           <div className="language-container">
-            <FaRust className="language-icon text-grow-on-hover" title="Rust" />
-            <div className="language-text">Rust</div>
+            <BiLogoGit
+              className="language-icon text-grow-on-hover"
+              title="Git"
+            />
+            <div className="language-text">Git</div>
+          </div>
+          <div className="language-container">
+            <SiStrapi
+              className="language-icon text-grow-on-hover"
+              title="Strapi"
+            />
+            <div className="language-text">Strapi</div>
+          </div>
+          <div className="language-container">
+            <BiLogoGraphql
+              className="language-icon text-grow-on-hover"
+              title="GraphQL"
+            />
+            <div className="language-text">GraphQL</div>
+          </div>
+
+          <div className="language-container">
+            <BiLogoTailwindCss
+              className="language-icon text-grow-on-hover"
+              title="Tailwind CSS"
+            />
+            <div className="language-text">Tailwind CSS</div>
           </div>
 
           <div className="language-container">
@@ -284,14 +271,6 @@ const Home = () => {
           </div>
 
           <div className="language-container">
-            <FaHtml5
-              className="language-icon text-grow-on-hover"
-              title="HTML5"
-            />
-            <div className="language-text">HTML5</div>
-          </div>
-
-          <div className="language-container">
             <BiLogoRedux
               className="language-icon text-grow-on-hover"
               title="Redux"
@@ -305,19 +284,32 @@ const Home = () => {
           </div>
 
           <div className="language-container">
-            <SiPostgresql
+            <FaHtml5
               className="language-icon text-grow-on-hover"
-              title="PostgreSQL"
+              title="HTML5"
             />
-            <div className="language-text">PostgreSQL</div>
+            <div className="language-text">HTML5</div>
           </div>
-
           <div className="language-container">
             <FaCss3Alt
               className="language-icon text-grow-on-hover"
               title="CSS3"
             />
             <div className="language-text">CSS3</div>
+          </div>
+          <div className="language-container">
+            <BiLogoReact
+              className="language-icon text-grow-on-hover"
+              title="React"
+            />
+            <div className="language-text">React</div>
+          </div>
+          <div className="language-container">
+            <BiLogoJavascript
+              className="language-icon text-grow-on-hover"
+              title="JavaScript"
+            />
+            <div className="language-text">JavaScript</div>
           </div>
         </div>
       </section>

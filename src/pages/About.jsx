@@ -53,8 +53,8 @@ const About = () => {
 
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-3 md:col-end-7 row-start-3 row-end-4">
           <div>
-            <h2>Realtor Clone</h2>
-            <h3>Design / Dev</h3>
+            <h2>Gualberto's #2</h2>
+            <h3>Lead Dev</h3>
           </div>
           <h4>~2 Months</h4>
         </div>
