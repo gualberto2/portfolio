@@ -53,7 +53,7 @@ const About = () => {
 
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-3 md:col-end-7 row-start-3 row-end-4">
           <div>
-            <h2>Gualberto's #2</h2>
+            <h2>Gualbertos 2</h2>
             <h3>Lead Dev</h3>
           </div>
           <h4>~2 Months</h4>
@@ -66,13 +66,13 @@ const About = () => {
           <h4>~3 Weeks</h4>
         </div>
       </div>
-      <div className="grid-cols-12 grid mb-4">
+      <div className="md:grid-cols-12 grid mb-4 ">
         <h2 className="col-start-5 col-end-12 text-4xl font-semibold tracking-tighter">
           Let's collaborate if you're committed to accessibility and providing
           code for all.
         </h2>
       </div>
-      <div className="grid-cols-12 grid ">
+      <div className="md:grid-cols-12 grid px-2 md:px-0">
         <h2 className="col-start-5 col-end-12 text-xl font-normal tracking-widest">
           My goal with my work is to make it as accessible as possible.
           Providing services to all allows for market expansion and improved
