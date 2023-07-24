@@ -79,7 +79,7 @@ const Home = () => {
   if (loading) return <Loading />;
 
   return (
-    <body className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
+    <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
       {showPopup && <PopUpMsg isOpen={true} closeModal={closeModal} />}
 
       <section className="mb-16">
@@ -370,7 +370,7 @@ const Home = () => {
           </div>
         </form>
       </section>
-    </body>
+    </section>
   );
 };
 
