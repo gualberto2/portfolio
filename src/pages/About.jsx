@@ -41,32 +41,32 @@ const About = () => {
       <div className="grid md:grid-cols-10 grid-rows-4 gap-y-4 mb-20">
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-7 md:col-end-11">
           <div>
-            <h2>Portfolio</h2>
-            <h3>Design / Dev</h3>
+            <h2 className="text-lg font-medium">Portfolio</h2>
+            <h3 className="text-lg font-medium">Design / Dev</h3>
           </div>
-          <h4>~2 weeks</h4>
+          <h4 className="font-semibold text-xl">~2 weeks</h4>
         </div>
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-4 md:col-end-11 row-start-2 row-end-3">
           <div>
-            <h2>Ocomni</h2>
-            <h3>Lead Dev</h3>
+            <h2 className="text-lg font-medium">Ocomni</h2>
+            <h3 className="text-lg font-medium">Lead Dev</h3>
           </div>
-          <h4>~3 months</h4>
+          <h4 className="font-semibold text-xl">~3 months</h4>
         </div>
 
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-3 md:col-end-7 row-start-3 row-end-4">
           <div>
-            <h2>Gualbertos 2</h2>
-            <h3>Lead Dev</h3>
+            <h2 className="text-lg font-medium">Gualbertos 2</h2>
+            <h3 className="text-lg font-medium">Lead Dev</h3>
           </div>
-          <h4>~2 Months</h4>
+          <h4 className="font-semibold text-xl">~2 Months</h4>
         </div>
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-1 md:col-end-4 row-start-4 row-end-5">
           <div>
-            <h2>6 Grados</h2>
-            <h3>Design / Dev</h3>
+            <h2 className="text-lg font-medium">6 Grados</h2>
+            <h3 className="text-lg font-medium">Design / Dev</h3>
           </div>
-          <h4>~3 Weeks</h4>
+          <h4 className="font-semibold text-xl">~3 Weeks</h4>
         </div>
       </div>
       <div className="md:grid-cols-12 grid mb-4 ">
@@ -87,8 +87,8 @@ const About = () => {
         </h2>
       </div>
       <div className="grid md:grid-cols-8 md:grid-rows-2 md:mx-16 grid-cols-2 grid-rows-8 bg-[#E0E0E0] rounded-3xl py-6 px-5 md:p-8 gap-8">
-        <div className="md:col-start-1 md:col-end-5 col-start-1 col-end-3">
-          <p className="opacity-30 text-2xl mb-4 font-semibold">[0]</p>
+        <div className="md:col-start-1 md:col-end-5 col-start-1 col-end-3 ">
+          <p className="opacity-30  text-2xl mb-4 font-semibold">[0]</p>
           <h2 className="text-2xl font-semibold tracking-tighter mb-2">
             Design
           </h2>
