@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl py-20">
+    <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl py-20 min-h-screen">
       <h1 className="text-center text-5xl md:text-6xl font-semibold tracking-tighter mb-16">
         I'm Elijah
       </h1>
@@ -86,7 +86,7 @@ const About = () => {
           open-source.
         </h2>
       </div>
-      <div className="grid md:grid-cols-8 md:grid-rows-2 md:mx-16 grid-cols-2 grid-rows-8 bg-[#E0E0E0] rounded-3xl p-4 md:p-8 gap-8">
+      <div className="grid md:grid-cols-8 md:grid-rows-2 md:mx-16 grid-cols-2 grid-rows-8 bg-[#E0E0E0] rounded-3xl py-6 px-5 md:p-8 gap-8">
         <div className="md:col-start-1 md:col-end-5 col-start-1 col-end-3">
           <p className="opacity-30 text-2xl mb-4 font-semibold">[0]</p>
           <h2 className="text-2xl font-semibold tracking-tighter mb-2">
