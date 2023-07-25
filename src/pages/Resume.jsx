@@ -2,7 +2,7 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
+    <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl h-screen">
       <h1 className="pt-20 flex flex-col text-center text-5xl md:text-6xl font-semibold tracking-tighter mb-4">
         Resume
       </h1>
