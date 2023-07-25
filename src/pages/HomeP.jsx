@@ -362,10 +362,11 @@ const Home = () => {
               className="md:row-start-2 md:row-end-3 md:col-span-2 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white row-start-4 row-end-6 "
             />
             <button
-              className="md:row-start-3 md:row-end-4 md:col-span-2 row-start-6 row-end-7 px-8 py-3 transition duration-150 ease-in-out  rounded-2xl mx-[20%] text-white  bg-black flex flex-row items-center justify-center"
+              className="md:row-start-3 md:row-end-4 md:col-span-2 row-start-6 row-end-7 px-8 py-3 rounded-2xl mx-[20%] text-white  bg-black flex flex-row items-center justify-center md:text-2xl text-md font-medium whitespace-nowrap text-center transition duration-200 ease-in-out uppercase"
               type="submit"
             >
-              <FaPeopleCarry className="text-2xl text-center transition duration-200 ease-in-out" />
+              send message
+              <FaPeopleCarry className="hidden md:block ml-2 text-2xl text-center transition duration-200 ease-in-out" />
             </button>
           </div>
         </form>
