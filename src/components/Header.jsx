@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <nav className=" mt-2 pt-6 sticky">
-      <ul className="grid grid-cols-4">
+      <ul className="grid grid-cols-4 md:flex md:justify-between md:mx-16 items-center">
         <li
           className="font-medium text-center col-start-1 col-end-2 text-md md:text-xl cursor-pointer"
           onClick={() => navigate("/")}
