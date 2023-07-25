@@ -5,28 +5,28 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex flex-col md:flex-row justify-center items-center mt-2 pt-6 sticky">
-      <ul className="flex flex-row items-center gap-10 md:mr-4">
+    <nav className=" mt-2 pt-6 sticky">
+      <ul className="grid grid-cols-4">
         <li
-          className="font-medium text-md md:text-xl cursor-pointer"
+          className="font-medium text-center col-start-1 col-end-2 text-md md:text-xl cursor-pointer"
           onClick={() => navigate("/")}
         >
           Home
         </li>
         <li
-          className="font-medium text-md md:text-xl cursor-pointer"
+          className="font-medium col-start-2 col-end-3 text-md md:text-xl cursor-pointer text-center"
           onClick={() => navigate("/resume")}
         >
           Resume
         </li>
         <li
-          className="font-medium text-md md:text-xl cursor-pointer"
+          className="font-medium col-start-3 col-end-4 text-md md:text-xl cursor-pointer text-center"
           onClick={() => navigate("/about")}
         >
           About
         </li>
         <li
-          className="font-medium text-md md:text-xl cursor-pointer"
+          className="font-medium col-start-4 col-end-5 text-md md:text-xl cursor-pointer text-center"
           onClick={() => navigate("/work")}
         >
           Work

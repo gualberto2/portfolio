@@ -1,4 +1,5 @@
 import React from "react";
+import { FaSpotify } from "react-icons/fa";
 
 const Footer = () => {
   // const CLIENT_ID = "ced6aca9c9dc448799fc5a7159f99665";
@@ -22,25 +23,25 @@ const Footer = () => {
   //     .then((data) => console.log(data));
   // }, []);
   return (
-    <footer className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl md:grid md:grid-cols-8 mt-auto py-20 ">
-      <div className="md:col-start-2 md:col-end-4 mb-8 md:mb-0">
-        {/* on repeat spotify api thingy here */}
-        <div className="bg-green-100 rounded-3xl p-4 md:col-start-2 md:col-end-5 w-full">
-          <h3>Spotify</h3>
-          <h4>On Repeat</h4>
-          {}
+    <footer className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl md:grid md:grid-cols-8 mt-auto py-20 gap-6">
+      <div className="md:col-start-1 md:col-end-5 mb-8 md:mb-0 bg-green-800 p-6 mx-4 rounded-3xl relative">
+        <h2 className="text-xl font-medium text-white">Spotify</h2>
+        <h3 className="text-xl font-medium text-white mb-2">On Repeat</h3>
+        <FaSpotify className="absolute top-7 right-11 text-5xl text-white" />
+        <div>
+          <p className="text-md font-medium text-white whitespace-nowrap bg-green-900 rounded-2xl p-3 mb-1">
+            dynamic song names here
+          </p>
         </div>
-        <p className="cursor-pointer flex flex-row justify-between px-4 ">
-          <span className="text-lg whitespace-nowrap ">C 2023 Elijah</span>
-          <span>-</span>
-          <span className="cursor-pointer text-lg hover:text-green-900 transition duration-200 ease-in-out">
-            Colophon
-          </span>
-        </p>
+        <h4 className="text-white font-light cursor-pointer hover:text-gray-300 transition duration-150 ease-in">
+          Listen with me :D
+        </h4>
       </div>
       <section className="flex flex-row gap-8 px-12 md:col-start-5 md:col-end-8 justify-center align-center">
         <div className="flex flex-col">
-          <h3 className="font-medium text-2xl mb-2">Elsewhere</h3>
+          <h3 className="font-medium text-2xl mb-2 whitespace-nowrap">
+            Other Places
+          </h3>
           <div>
             <ul className="flex flex-col gap-8">
               <a

@@ -7,7 +7,7 @@ const About = () => {
         I'm Elijah
       </h1>
       <div className="flex flex-col md:flex-row md:px-20 items-center mb-20">
-        <div className="relative flex justify-center mb-4 rounded-xl gap-12">
+        <div className="relative flex justify-center  rounded-xl mb-8 gap-12">
           <img
             src="https://avatars.githubusercontent.com/u/103850410?v=4"
             alt="Sean Halpin"
@@ -35,6 +35,9 @@ const About = () => {
           </h3>
         </div>
       </div>
+      <h4 className="text-center font-light text-lg text-gray-500 mb-2">
+        Time spent on some work
+      </h4>
       <div className="grid md:grid-cols-10 grid-rows-4 gap-y-4 mb-20">
         <div className="bg-green-900 rounded-full py-4 px-10 text-white flex flex-row-reverse items-center justify-between md:col-start-7 md:col-end-11">
           <div>
@@ -72,15 +75,63 @@ const About = () => {
           code for all.
         </h2>
       </div>
-      <div className="md:grid-cols-12 grid px-2 md:px-0">
+      <div className="md:grid-cols-12 grid px-2 md:px-0 mb-16">
         <h2 className="col-start-5 col-end-12 text-xl font-normal tracking-widest">
-          My goal with my work is to make it as accessible as possible.
-          Providing services to all allows for market expansion and improved
-          usability throughout each project. I believe in providing all humans
-          education in the world of tech. A lot of my work will include
-          documentation that is easy to digest and understand and hopefully will
-          spark someone to gain interest in the world of coding.
+          My goal is to make my work as accessible as possible. Providing
+          services to all allows for market expansion and improved usability
+          throughout each project. I believe in providing all humans education
+          in the world of tech. A lot of my work will include documentation that
+          is easy to digest and understand and hopefully will spark someone to
+          gain interest in the world of coding. I do my best to make it
+          open-source.
         </h2>
+      </div>
+      <div className="grid md:grid-cols-8 md:grid-rows-2 md:mx-16 grid-cols-2 grid-rows-8 bg-[#E0E0E0] rounded-3xl p-4 md:p-8 gap-8">
+        <div className="md:col-start-1 md:col-end-5 col-start-1 col-end-3">
+          <p className="opacity-30 text-2xl mb-4 font-semibold">[0]</p>
+          <h2 className="text-2xl font-semibold tracking-tighter mb-2">
+            Design
+          </h2>
+          <h3 className="text-md font-normal tracking-widest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas
+            voluptatibus error consequatur harum illum eveniet, fugit non, nam
+            animi doloremque maxime esse a quis cumque!
+          </h3>
+        </div>
+        <div className="md:col-start-5 md:col-end-9 col-start-1 col-end-3">
+          <p className="opacity-30 text-2xl mb-4 font-semibold">[1]</p>
+          <h2 className="text-2xl font-semibold tracking-tighter mb-2">
+            Collaborate
+          </h2>
+          <h3 className="text-md font-normal tracking-widest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas
+            voluptatibus error consequatur harum illum eveniet, fugit non, nam
+            animi doloremque maxime esse a quis cumque!
+          </h3>
+        </div>
+        <div className="md:col-start-1 md:col-end-5 col-start-1 col-end-3">
+          <p className="opacity-30 text-2xl mb-4 font-semibold">[2]</p>
+          <h2 className="text-2xl font-semibold tracking-tighter mb-2">
+            Beautify
+          </h2>
+          <h3 className="text-md font-normal tracking-widest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas
+            voluptatibus error consequatur harum illum eveniet, fugit non, nam
+            animi doloremque maxime esse a quis cumque!
+          </h3>
+        </div>
+        <div className="md:col-start-5 md:col-end-9 col-start-1 col-end-3">
+          {" "}
+          <p className="opacity-30 text-2xl mb-4 font-semibold">[3]</p>
+          <h2 className="text-2xl font-semibold tracking-tighter mb-2">
+            Solve it
+          </h2>
+          <h3 className="text-md font-normal tracking-widest">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quas
+            voluptatibus error consequatur harum illum eveniet, fugit non, nam
+            animi doloremque maxime esse a quis cumque!
+          </h3>
+        </div>
       </div>
     </section>
   );
