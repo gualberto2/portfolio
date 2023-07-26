@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useState } from "react";
 import Work from "./pages/Work";
-import Projects from "./pages/Projects";
+
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 
@@ -53,12 +53,7 @@ function App() {
             onStart={showLoadingIndicator}
             onEnd={hideLoadingIndicator}
           />
-          <Route
-            path="/projects"
-            element={<Projects />}
-            onStart={showLoadingIndicator}
-            onEnd={hideLoadingIndicator}
-          />
+
           <Route
             path="/resume"
             element={<Resume />}
