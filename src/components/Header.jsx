@@ -29,7 +29,7 @@ const Header = () => {
           className="font-medium col-start-4 col-end-5 text-md md:text-xl cursor-pointer text-center"
           onClick={() => navigate("/work")}
         >
-          Work
+          Projects
         </li>
       </ul>
     </nav>
