@@ -6,10 +6,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { useState } from "react";
-import Work from "./pages/Work";
 
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -42,8 +42,8 @@ function App() {
             onEnd={hideLoadingIndicator}
           />
           <Route
-            path="/work"
-            element={<Work />}
+            path="/projects"
+            element={<Projects />}
             onStart={showLoadingIndicator}
             onEnd={hideLoadingIndicator}
           />
