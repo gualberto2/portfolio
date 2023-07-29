@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
+import { graphcms } from "../components/blog-components/queries";
 
 const useQueryPosts = ({ query, limit = 6 }) => {
   const { slug } = useParams();
