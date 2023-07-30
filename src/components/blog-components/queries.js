@@ -16,7 +16,8 @@ const post = `
     createdAt
     updatedAt
     excerpt
-
+    github
+    liveSite
 `;
 
 const comment = `
