@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { QUERY_POSTS, graphcms } from "../components/blog-components/queries";
 import Posts from "../components/Posts";
+import moment from "moment";
 
 const Projects = () => {
   const [posts, setPosts] = useState([]);
@@ -16,9 +17,8 @@ const Projects = () => {
         Discover the inner workings of my mind and gain insight into my creative
         process.
       </h2>
-
-      <div>
-        <Posts posts={posts} />
+      <div className="my-12">
+        <Posts posts={posts} className="" />
       </div>
     </section>
   );
