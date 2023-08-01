@@ -17,7 +17,11 @@ const Projects = () => {
         Discover the inner workings of my mind and gain insight into my creative
         process.
       </h2>
+
       <div className="my-12">
+        <h1 className="text-center font-light text-gray-800 text-md mb-3">
+          Checkout the latest big project
+        </h1>
         <Posts posts={posts} className="" />
       </div>
     </section>
