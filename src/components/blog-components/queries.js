@@ -18,6 +18,7 @@ const post = `
     excerpt
     github
     liveSite
+    subTitle
 `;
 
 const comment = `
