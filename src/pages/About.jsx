@@ -26,7 +26,7 @@ const About = () => {
           <h3 className="text-2xl font-normal  mb-3">
             For over 1 year, I've worked in various areas of Full-stack
             development, including front-end and back-end development, design,
-            marketing, and UI/UX, while learning Ruby and Rails with Node.JS.
+            marketing, and UI/UX, while learning Ruby and Rails with Next.JS.
             I'm proud to have worn many hats.
           </h3>
           <h3 className="text-2xl font-normal ">
