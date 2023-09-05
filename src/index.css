@@ -10,6 +10,11 @@ body {
   background-color: #ededed;
 }
 
+::selection {
+  color: white;
+  background: #baf2bb;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -24,7 +29,7 @@ code {
   transform: translateX(6px);
 }
 
-.bounceEffect {
+.postLink:hover .bounceEffect {
   animation: bounce 2s infinite;
 }
 
