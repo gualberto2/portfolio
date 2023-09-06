@@ -33,6 +33,14 @@ const category = `
     slug,
     title
 `;
+const team = `
+id
+authorImg {
+  url
+}
+authorName
+authorSite
+`;
 
 export const QUERY_POSTS = gql`
 {
@@ -40,6 +48,9 @@ export const QUERY_POSTS = gql`
         ${post}
         categories(){
             ${category}
+        }
+        teams(){
+            ${team}
         }
     }
   }
@@ -53,6 +64,7 @@ query GetOnePost($slug: String!) {
         comments(){
             ${comment}
         }
+
     }
 }
 `;
