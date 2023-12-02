@@ -8,7 +8,7 @@ shortDescriptionOfTheWebsite
       url
     }
     content {
-      html
+      raw
     }
 
     title
@@ -22,17 +22,6 @@ shortDescriptionOfTheWebsite
     subTitle
 `;
 
-const comment = `
-id
-name
-email
-comment`;
-
-const category = `
-    id,
-    slug,
-    title
-`;
 const team = `
 id
 authorImg {
@@ -46,9 +35,6 @@ export const QUERY_POSTS = gql`
 {
     posts(){
         ${post}
-        categories(){
-            ${category}
-        }
         teams(){
             ${team}
         }
@@ -57,14 +43,10 @@ export const QUERY_POSTS = gql`
 
 `;
 
-export const QUERY_ONE_POST = gql`
+export const QUERY_SELECTED_POST = gql`
 query GetOnePost($slug: String!) {
     posts(where: {slug: $slug}){
         ${post}
-        comments(){
-            ${comment}
-        }
-
     }
 }
 `;
