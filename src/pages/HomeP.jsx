@@ -19,6 +19,7 @@ import {
   BiLogoGithub,
   BiLogoGit,
 } from "react-icons/bi";
+import { SiNextdotjs } from "react-icons/si";
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import { FaRegPaperPlane } from "react-icons/fa";
@@ -29,18 +30,13 @@ import { SiRubyonrails, SiStrapi, SiPostgresql } from "react-icons/si";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Loading from "../components/Loading";
 import React, { useState } from "react";
-import PopUpMsg from "../components/PopUpMsg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const [showPopup, setShowPopup] = useState(true);
   const [loading, setLoading] = useState(false);
 
-  const closeModal = () => {
-    setShowPopup(false);
-  };
   const [formData, setFormData] = useState({
     first: "",
     last: "",
@@ -80,8 +76,6 @@ const Home = () => {
 
   return (
     <section className="px-2 max-w-[95%] mx-auto 2xl:max-w-6xl">
-      {showPopup && <PopUpMsg isOpen={true} closeModal={closeModal} />}
-
       <section className="mb-16">
         <section className="">
           <div className="pt-20 ">
@@ -225,6 +219,14 @@ const Home = () => {
           </div>
 
           <div className="language-container">
+            <BiLogoGithub
+              className="language-icon text-grow-on-hover"
+              title="GitHub"
+            />
+            <div className="language-text">GitHub</div>
+          </div>
+
+          <div className="language-container">
             <BiLogoGit
               className="language-icon text-grow-on-hover"
               title="Git"
@@ -263,14 +265,6 @@ const Home = () => {
           </div>
 
           <div className="language-container">
-            <BiLogoGithub
-              className="language-icon text-grow-on-hover"
-              title="GitHub"
-            />
-            <div className="language-text">GitHub</div>
-          </div>
-
-          <div className="language-container">
             <BiLogoRedux
               className="language-icon text-grow-on-hover"
               title="Redux"
@@ -303,6 +297,13 @@ const Home = () => {
               title="React"
             />
             <div className="language-text">React</div>
+          </div>
+          <div className="language-container">
+            <SiNextdotjs
+              className="language-icon text-grow-on-hover"
+              title="Next.JS"
+            />
+            <div className="language-text">Next.js</div>
           </div>
           <div className="language-container">
             <BiLogoJavascript
