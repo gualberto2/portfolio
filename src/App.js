@@ -10,6 +10,8 @@ import { useState } from "react";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
+import Article from "./pages/Article";
+import Post from "./components/Post";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -44,6 +46,18 @@ function App() {
           <Route
             path="/projects"
             element={<Projects />}
+            onStart={showLoadingIndicator}
+            onEnd={hideLoadingIndicator}
+          />
+          {/* <Route
+            path="/post/:slug"
+            element={<Post />}
+            onStart={showLoadingIndicator}
+            onEnd={hideLoadingIndicator}
+          /> */}
+          <Route
+            path="/article/:slug"
+            element={<Article />}
             onStart={showLoadingIndicator}
             onEnd={hideLoadingIndicator}
           />
