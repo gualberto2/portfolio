@@ -193,3 +193,54 @@ code {
 }
 
 /* End of: _Projects Page */
+
+/* About page */
+.half-round {
+  border-radius: 200px 200px 0 0;
+}
+
+@keyframes backgroundAnim {
+  0%,
+  100% {
+    background: linear-gradient(45deg, #83a4d4, #b6fbff);
+  }
+  25% {
+    background: linear-gradient(45deg, #b6fbff, #83a4d4);
+  }
+  50% {
+    background: linear-gradient(45deg, #91eae4, #86a8e7);
+  }
+  75% {
+    background: linear-gradient(45deg, #86a8e7, #91eae4);
+  }
+}
+
+.hdrAnim {
+  animation: backgroundAnim 3600s ease infinite;
+  background-size: 400% 400%;
+  -webkit-animation: backgroundAnim 3600s ease infinite;
+  -moz-animation: backgroundAnim 3600s ease infinite;
+  -o-animation: backgroundAnim 3600s ease infinite;
+  animation: backgroundAnim 3600s ease infinite;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.project-card {
+  background-color: rgba(254, 255, 234, 0.45);
+  backdrop-filter: blur(10px);
+}
+.project-card:hover {
+  background-color: rgba(246, 246, 236, 0.45);
+  backdrop-filter: blur(10px);
+}
