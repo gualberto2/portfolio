@@ -12,6 +12,7 @@ import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import Article from "./pages/Article";
 import Post from "./components/Post";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       {isLoading && <Loading />}
       <Router>
         <ScrollToTop />
