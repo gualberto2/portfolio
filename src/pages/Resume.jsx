@@ -12,10 +12,7 @@ const Resume = () => {
       <div className="my-12 w-full flex flex-col justify-center items-center">
         <h3 className="font-light text-gray-500">Updated: 1.11.24</h3>
         <button className="bg-[#A99AA2] hover:bg-[#A1919A] p-4 w-[50%] rounded-3xl cursor-pointer text-white font-medium transition duration-150 ease-in-out">
-          <a
-            href="../embeds/elijahWilsonResume.pdf"
-            download="elijahWilsonResume.pdf"
-          >
+          <a href="Resume.pdf" download="elijahWilsonResume.pdf">
             Click To Download
           </a>
         </button>
