@@ -5,8 +5,12 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaNpm,
+  FaRegPaperPlane,
+  FaAws,
+  FaJava,
+  FaPython,
 } from "react-icons/fa";
-import { BsBoxArrowInRight } from "react-icons/bs";
+import { BsBoxArrowInRight, BsFiletypeSql } from "react-icons/bs";
 import {
   BiCodeBlock,
   BiLogoReact,
@@ -19,15 +23,26 @@ import {
   BiLogoGithub,
   BiLogoGit,
 } from "react-icons/bi";
-import { SiNextdotjs } from "react-icons/si";
-import { serverTimestamp, addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
-import { FaRegPaperPlane } from "react-icons/fa";
-import { TypeAnimation } from "react-type-animation";
 import { DiRubyRough } from "react-icons/di";
 import { LiaNode } from "react-icons/lia";
-import { SiRubyonrails, SiStrapi, SiPostgresql } from "react-icons/si";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiRubyonrails,
+  SiStrapi,
+  SiPostgresql,
+  SiMysql,
+  SiPrisma,
+  SiSvelte,
+  SiKotlin,
+  SiCsharp,
+} from "react-icons/si";
+import { RiSupabaseFill } from "react-icons/ri";
+
+import { serverTimestamp, addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
+import { TypeAnimation } from "react-type-animation";
 import Loading from "../components/Loading";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -55,6 +70,25 @@ const Home = () => {
     }
   }
 
+  const handlePhoneChange = (e) => {
+    // Remove all non-digit characters from the input for processing
+    const digits = e.target.value.replace(/\D/g, "");
+
+    // Break down the string of digits based on the desired phone number format
+    const phoneNumberMatch = digits.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+
+    // Reformat the string by placing the hyphens in the correct positions
+    let formattedNumber = "";
+    if (phoneNumberMatch) {
+      formattedNumber += phoneNumberMatch[1] ? `(${phoneNumberMatch[1]}` : "";
+      formattedNumber += phoneNumberMatch[2] ? `)-${phoneNumberMatch[2]}` : "";
+      formattedNumber += phoneNumberMatch[3] ? `-${phoneNumberMatch[3]}` : "";
+    }
+
+    // Update the formData state with the new formatted phone number
+    setFormData({ ...formData, phone: formattedNumber });
+  };
+
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
@@ -65,7 +99,9 @@ const Home = () => {
       };
       delete formDataCopy.formDEV;
       const docRef = await addDoc(collection(db, "getInTouch"), formData);
-      console.log(`Here is the information you submited: ${docRef}`);
+
+      console.log(`Here is the information you submited: ${formData}`);
+      // .success("Thank you for your message, I will contact you soon :)");
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -183,6 +219,13 @@ const Home = () => {
             />
             <div className="language-text">Firebase</div>
           </div>
+          <div className="language-container">
+            <SiPrisma
+              className="language-icon text-grow-on-hover "
+              title="Firebase"
+            />
+            <div className="language-text">Prisma</div>
+          </div>
 
           <div className="language-container">
             <SiPostgresql
@@ -199,8 +242,48 @@ const Home = () => {
             <div className="language-text">MongoDB</div>
           </div>
           <div className="language-container">
+            <RiSupabaseFill
+              className="language-icon text-grow-on-hover"
+              title="MongoDB"
+            />
+            <div className="language-text">SupaBase</div>
+          </div>
+          <div className="language-container">
+            <BsFiletypeSql
+              className="language-icon text-grow-on-hover"
+              title="SQL"
+            />
+            <div className="language-text">SQL</div>
+          </div>
+          <div className="language-container">
+            <SiMysql className="language-icon text-grow-on-hover" title="SQL" />
+            <div className="language-text">MySQL</div>
+          </div>
+          <div className="language-container">
+            <SiCsharp className="language-icon text-grow-on-hover" title="C#" />
+            <div className="language-text">C#</div>
+          </div>
+          <div className="language-container">
+            <FaJava className="language-icon text-grow-on-hover" title="Java" />
+            <div className="language-text">Java</div>
+          </div>
+          <div className="language-container">
+            <SiKotlin
+              className="language-icon text-grow-on-hover"
+              title="Kotlin"
+            />
+            <div className="language-text">Kotlin</div>
+          </div>
+          <div className="language-container">
             <FaRust className="language-icon text-grow-on-hover" title="Rust" />
             <div className="language-text">Rust</div>
+          </div>
+          <div className="language-container">
+            <FaPython
+              className="language-icon text-grow-on-hover"
+              title="Python"
+            />
+            <div className="language-text">Python</div>
           </div>
 
           <div className="language-container">
@@ -224,6 +307,13 @@ const Home = () => {
               title="GitHub"
             />
             <div className="language-text">GitHub</div>
+          </div>
+          <div className="language-container">
+            <FaAws
+              className="language-icon text-grow-on-hover"
+              title="GitHub"
+            />
+            <div className="language-text">AWS</div>
           </div>
 
           <div className="language-container">
@@ -274,7 +364,7 @@ const Home = () => {
 
           <div className="language-container">
             <FaNpm className="language-icon text-grow-on-hover" title="npm" />
-            <div className="language-text">npm</div>
+            <div className="language-text">NPM</div>
           </div>
 
           <div className="language-container">
@@ -282,14 +372,21 @@ const Home = () => {
               className="language-icon text-grow-on-hover"
               title="HTML5"
             />
-            <div className="language-text">HTML5</div>
+            <div className="language-text">HTML 5</div>
           </div>
           <div className="language-container">
             <FaCss3Alt
               className="language-icon text-grow-on-hover"
               title="CSS3"
             />
-            <div className="language-text">CSS3</div>
+            <div className="language-text">CSS 3</div>
+          </div>
+          <div className="language-container">
+            <SiSvelte
+              className="language-icon text-grow-on-hover"
+              title="Svelte"
+            />
+            <div className="language-text">Svelte</div>
           </div>
           <div className="language-container">
             <BiLogoReact
@@ -311,6 +408,13 @@ const Home = () => {
               title="JavaScript"
             />
             <div className="language-text">JavaScript</div>
+          </div>
+          <div className="language-container">
+            <SiTypescript
+              className="language-icon text-grow-on-hover"
+              title="JavaScript"
+            />
+            <div className="language-text">TypeScript</div>
           </div>
         </div>
       </section>
@@ -344,10 +448,9 @@ const Home = () => {
 
             <input
               type="tel"
-              placeholder="phone"
-              onChange={onChange}
-              value={phone}
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              placeholder="(123)-456-7890"
+              value={formData.phone}
+              onChange={handlePhoneChange}
               id="phone"
               className="md:row-start-1 md:row-end-2 md:col-span-2 px-6 md:mx-8 py-3 transition duration-150 ease-in-out  rounded-xl bg-[#C87EA6] hover:bg-[#B87A9B] placeholder-white"
             />
