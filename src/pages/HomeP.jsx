@@ -40,6 +40,8 @@ import {
 } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 
+import toast from "react-hot-toast";
+
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import { TypeAnimation } from "react-type-animation";
@@ -71,13 +73,9 @@ const Home = () => {
   }
 
   const handlePhoneChange = (e) => {
-    // Remove all non-digit characters from the input for processing
     const digits = e.target.value.replace(/\D/g, "");
-
-    // Break down the string of digits based on the desired phone number format
     const phoneNumberMatch = digits.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
 
-    // Reformat the string by placing the hyphens in the correct positions
     let formattedNumber = "";
     if (phoneNumberMatch) {
       formattedNumber += phoneNumberMatch[1] ? `(${phoneNumberMatch[1]}` : "";
@@ -85,11 +83,10 @@ const Home = () => {
       formattedNumber += phoneNumberMatch[3] ? `-${phoneNumberMatch[3]}` : "";
     }
 
-    // Update the formData state with the new formatted phone number
     setFormData({ ...formData, phone: formattedNumber });
   };
 
-  async function onSubmit(e) {
+  const onSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     try {
@@ -98,15 +95,21 @@ const Home = () => {
         timestamp: serverTimestamp(),
       };
       delete formDataCopy.formDEV;
-      const docRef = await addDoc(collection(db, "getInTouch"), formData);
+      toast.success("Thank you for your message, I will contact you soon :)");
+      const docRef = addDoc(collection(db, "getInTouch"), formData);
 
-      console.log(`Here is the information you submited: ${formData}`);
-      // .success("Thank you for your message, I will contact you soon :)");
+      setFormData({
+        first: "",
+        last: "",
+        phone: "",
+        txtAr: "",
+      });
+
       setLoading(false);
     } catch (error) {
       setLoading(false);
     }
-  }
+  };
 
   if (loading) return <Loading />;
 
